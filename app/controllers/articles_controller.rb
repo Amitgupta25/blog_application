@@ -22,6 +22,27 @@ class ArticlesController < ApplicationController
 			render :new, status: :unprocessable_entity
 		end
 	end
+	
+	# It fetches the article from the database 
+	def edit 
+		@article  = Article.find(params[:id])
+	end
+
+	def update 
+		@article = Article.find(params[:id])
+
+		if @article.update(article_params)
+			redirect_to @article
+		else
+			render :edit, status: :unprocessable_entity
+		end
+	end
+
+	def destroy
+		@article = Article.find(params[:id])
+		Article.destroy
+
+		redirect_to root_path, status: :see_other
 
 	private
 	def article_params
