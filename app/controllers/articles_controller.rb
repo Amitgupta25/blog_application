@@ -1,51 +1,45 @@
 class ArticlesController < ApplicationController
-  
-	http_basic_authentication_with name: "Amit", password: "deq@123", except: [:index, :show]
 
 	def index
-    @articles = Article.all
-  end
-
-	# Used for viewing the article 
-  def show
-  	@article = Article.find(params[:id])
-  end
-
-	# It is used for creating a article 
-	def new
-		@article = Article.new
+    render(json: Article.all)
 	end
 
+	# Used for viewing the article 
+
+  def show
+		render(json: Article.find(params[:id]))
+  end
+
 	def create
-		@article = Article.new(article_params)
+		article = Article.new(article_params)
 		
-		if @article.save
-			redirect_to @article
-		else
-			render :new, status: :unprocessable_entity
-		end
+		article.save
+		render(json: article)
 	end
 	
 	# It fetches the article from the database 
-	def edit 
-		@article  = Article.find(params[:id])
-	end
 
 	def update 
-		@article = Article.find(params[:id])
-
-		if @article.update(article_params)
-			redirect_to @article
+		article = Article.find(params[:id])
+		if article
+			article.update(article_params)
+			render(json: {message: 'Updated Successfully'})
 		else
-			render :edit, status: :unprocessable_entity
+			render(json: {message: 'No such article prsent'})
+
 		end
 	end
 
-	def destroy
-		@article = Article.find(params[:id])
-		Article.destroy
+	# For destroying the article
 
-		redirect_to root_path, status: :see_other
+	def destroy
+		article = Article.find(params[:id])
+		if article
+			article.destroy
+			render(json: {message: 'Article deleted successfully'})
+		else
+			render(json: {message: 'No such article present'})
+		end
 	end
 
 	private
