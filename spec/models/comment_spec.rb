@@ -5,7 +5,6 @@ describe Comment, type: :model do
   before(:all) {@article = FactoryBot.create (:article)}
   before(:all) {@comment = FactoryBot.create (:comment)}
 
-
   it "Commenter name should be present" do
     @comment.commenter = nil
     expect(@comment).not_to be_valid

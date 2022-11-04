@@ -246,6 +246,7 @@ DEPENDENCIES
   rails (~> 7.0.4)
   rspec-rails (~> 6.0.0)
   selenium-webdriver
+  shoulda-matchers (~> 5.0)
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails
