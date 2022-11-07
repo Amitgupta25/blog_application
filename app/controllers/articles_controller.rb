@@ -16,8 +16,6 @@ class ArticlesController < ApplicationController
 		article.save
 		render(json: article)
 	end
-	
-	# It fetches the article from the database 
 
 	def update 
 		article = Article.find(params[:id])
@@ -29,8 +27,6 @@ class ArticlesController < ApplicationController
 
 		end
 	end
-
-	# For destroying the article
 
 	def destroy
 		article = Article.find(params[:id])
