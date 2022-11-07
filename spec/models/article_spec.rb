@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Article, type: :model do
+describe Article, type: :model do
   subject{described_class.new}
   
     it "Title must be present" do
