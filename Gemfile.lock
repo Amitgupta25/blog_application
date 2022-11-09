@@ -195,8 +195,6 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    shoulda-matchers (5.2.0)
-      activesupport (>= 5.2.0)
     slop (3.6.0)
     sprockets (4.1.1)
       concurrent-ruby (~> 1.0)
@@ -248,7 +246,6 @@ DEPENDENCIES
   rails (~> 7.0.4)
   rspec-rails (~> 6.0.0)
   selenium-webdriver
-  shoulda-matchers (~> 5.0)
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails

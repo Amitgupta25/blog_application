@@ -22,5 +22,4 @@ describe ArticlesController, :type => :controller do
     article = FactoryBot.create (:article)
     expect{ delete :destroy, :id => article.id}
   end
-
 end
