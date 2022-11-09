@@ -4,15 +4,12 @@ class ArticlesController < ApplicationController
     render(json: Article.all)
 	end
 
-	# Used for viewing the article 
-
   def show
 		render(json: Article.find(params[:id]))
   end
 
 	def create
 		article = Article.new(article_params)
-		
 		article.save
 		render(json: article)
 	end
@@ -24,7 +21,6 @@ class ArticlesController < ApplicationController
 			render(json: {message: 'Updated Successfully'})
 		else
 			render(json: {message: 'No such article prsent'})
-
 		end
 	end
 
