@@ -54,6 +54,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 6.0.0'
   gem 'factory_bot_rails'
   gem 'pry', '~> 0.10.4'
+  gem"letter_opener"
 end
 
 group :development do
@@ -74,3 +75,5 @@ group :test do
   gem "webdrivers"
 end
 
+
+gem "sidekiq", "~> 7.0"
