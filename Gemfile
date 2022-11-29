@@ -75,6 +75,11 @@ group :test do
   gem "webdrivers"
 end
 
+<<<<<<< HEAD
 gem 'whenever'
 gem "sidekiq", "~> 7.0"
 # gem "sinatra"
+=======
+
+gem "sidekiq", "~> 7.0"
+>>>>>>> 1d5d8c8... Working on schedular and sidekiq
