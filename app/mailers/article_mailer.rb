@@ -12,7 +12,7 @@ class ArticleMailer < ApplicationMailer
       from: "supportblogapp@gmail.com",
       to: "ag09754945531@gmail.com",
       # to send the email to all we can use cc: "email_of _the_desired_person"
-      subject: "New article created"  
+      subject: "Hope Your are doing Good it's time to create some Articles #{Time.now}"  
     ) 
   end
 end

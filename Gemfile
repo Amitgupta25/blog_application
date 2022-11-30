@@ -75,5 +75,6 @@ group :test do
   gem "webdrivers"
 end
 
-
+gem 'whenever'
 gem "sidekiq", "~> 7.0"
+# gem "sinatra"
