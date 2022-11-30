@@ -11,7 +11,6 @@ class ArticlesController < ApplicationController
 	def create
 		article = Article.new(article_params)
 		article.save
-		ArticleMailer.article_created.deliver_now
 		render(json: article)
 	end
 

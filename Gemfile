@@ -76,6 +76,7 @@ group :test do
 end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 gem 'whenever'
 gem "sidekiq", "~> 7.0"
 # gem "sinatra"
@@ -83,3 +84,8 @@ gem "sidekiq", "~> 7.0"
 
 gem "sidekiq", "~> 7.0"
 >>>>>>> 1d5d8c8... Working on schedular and sidekiq
+=======
+gem 'whenever'
+gem "sidekiq", "~> 7.0"
+# gem "sinatra"
+>>>>>>> c81994e... Updated the scheduler feature and implemented sidekiq
