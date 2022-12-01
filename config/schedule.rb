@@ -20,6 +20,8 @@
 # Learn more: http://github.com/javan/whenever
 
 
-every (10.seconds) do
+every 1.minutes do
   runner "EmailWorker.perform_now"
+  rake "batch:send_email"
+  #runner EmailJob.perform_now
 end
