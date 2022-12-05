@@ -19,5 +19,10 @@ module Blog
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
     config.api_only = true
+
+    config.autoload_paths += %W({config.root}/lib)
+    config.action_mailer.default_url_options = { host: 'localhost:3000' }
+
+    config.active_job.queue_adapter = :sidekiq
   end
 end
